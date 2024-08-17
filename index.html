@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Template QRCode Pix.</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Faça um pix para {Nome do beneficiário}</title>
+  <style>
+    /* Estilos personalizados */
+    body {
+      background-color: rgb(246, 248, 252);
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 30px auto;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+    }
+
+    h3 {
+      color: #f57c00;
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    ol {
+      color: #333;
+      text-align: left;
+    }
+
+    .qr-code-img {
+      max-width: 100%;
+      border: 5px solid #fff;
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+
+    .col-md-6 {
+      padding: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-4">
+      <!-- Coluna da Esquerda -->
+      <div class="col-md-6 text-center">
+        <h3>Leia ou copie o QR Code Pix e pague utilizando o aplicativo do seu banco.</h3>
+        <img src="https://i.imgur.com/HBu8vyF.jpeg" alt="QR Code Pix" class="qr-code-img">
+        <p>Expira em: <span id="tempo">2 horas</span></p>
+
+        <h3>Compartilhar:</h3>
+        <button class="btn text-white" style="background-color: #f57c00" id="btn-copy" onclick="copyCode()">
+          <i class="fas fa-copy"></i> Copiar Código
+        </button>
+        <a href="https://chat.whatsapp.com/Gb0rSw0qBnm08gMSORIv9r"
+          target="_blank" class="btn btn-success">
+          <i class="fab fa-whatsapp"></i> Via WhatsApp
+        </a>
+
+        <!-- Input com o código QR -->
+        <input type="text" id="qr-code-input" value="código_do_QR_Code" readonly style="margin-top: 10px; width: 100%;" onclick="this.select();">
+
+      </div>
+
+      <!-- Coluna da Direita -->
+      <div class="col-md-6">
+        <h3>Pague R$ 150,00 via Pix para nwask </h3>
+        <p><strong>Cobrança emitida por:</strong></p>
+        <p><strong>CPF:</strong> *****</p>
+        <p><strong>Telefone:desativado</strong> </p>
+        <p><strong>E-mail:</strong> desativado</p>
+        <p><strong>empresa:</strong> 3 nwask dev</p>
+
+        <h3>Informações adicionais</h3>
+        <p><strong>Descrição:</strong></p>
+        <p>Reserva sua key </p>
+        <p><strong>Data:</strong> 16/08/2024</p>
+        <p><strong>Horário:</strong> 18:11 às 00:00</p>
+
+        <!-- Instruções para pagamento -->
+        <div class="mt-4 text-center">
+          <h3>Instruções para Pagamento:</h3>
+          <ol>
+            <li>Abra o aplicativo do seu banco.</li>
+            <li>Acesse a função de pagamento via Pix.</li>
+            <li>Escaneie o QR Code acima.</li>
+            <li>Verifique se as informações estão corretas.</li>
+            <li>Confirme o pagamento.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyCode() {
+      var code = "00020126740014br.gov.bcb.pix01369c0f93fa-1eff-4642-b249-b2a949024fb00212iPhone tools5204000053039865406150.005802BR5924Mikael Eduardo Rodrigues6008Brasilia62090505xvet4630454C2"; // Substitua pelo código correto do QR Code Pix
+      navigator.clipboard.writeText(code)
+        .then(function() {
+          alert("Código copiado com sucesso!");
+        })
+        .catch(function() {
+          alert("Falha ao copiar o código.");
+        });
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
